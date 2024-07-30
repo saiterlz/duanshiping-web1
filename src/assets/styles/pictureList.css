@@ -1,0 +1,390 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+  outline-width: 0ch;
+  width: 300px;
+}
+p {
+  padding:10px;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 996px) {
+  .ml_piclist {
+    width: 100%;
+  }
+  .ml_piclist1_ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ml_piclist1_ul li {
+    width: calc((100% - 70px) / 3);
+    margin-right: 35px;
+    margin-bottom: 35px;
+  }
+  .ml_piclist1_ul li:nth-child(3n) {
+    margin-right: 0 !important;
+  }
+  .ml_piclist1_ul li img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+  .ml_piclist1_ul li p {
+    transition: all ease 0.4s;
+    text-align: center;
+    line-height: 55px;
+    background-color: #f0f0f0;
+  }
+  .ml_piclist1_ul li:hover p {
+    background-color: var(--main-color) !important;
+    color: var(--main-color-white) !important;
+  }
+  .ml_piclist2_ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .ml_piclist2_ul li {
+    width: 49%;
+    /* padding: 20px; */
+    margin-bottom: 25px;
+  }
+  .ml_piclist2_ul li img {
+    width: 100%;
+    transition: all ease 0.4s;
+    height: 300px;
+    object-fit: cover;
+  }
+  .ml_piclist2_ul li:hover img {
+    transform: scale(1.1);
+  }
+  .pos_div_pic_list {
+    position: relative;
+    overflow: hidden;
+  }
+  .piclist2pos {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .piclist2pos p {
+    color: var(--main-color-white);
+    text-align: center;
+    font-size: 24px;
+  }
+  .piclist2pos a {
+    display: block;
+    margin-top: 20px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: var(--main-color-white);
+    border: 1px solid var(--main-color-white);
+    transition: var(--main-transition);
+  }
+  .piclist2pos a:hover {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+  }
+  .ml_piclsit3_li {
+    border: 5px solid #e8e8e8;
+    width: 100%;
+    position: relative;
+    transition: var(--main-transition);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+  .flex-rever {
+    flex-direction: row-reverse;
+  }
+  .pic_lileft {
+    width: 50%;
+    position: relative;
+    z-index: 9;
+  }
+  .pic_lileft img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  .pic_liright {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    position: relative;
+    z-index: 9;
+  }
+  .pic_liright strong {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-weight: normal;
+    font-size: 24px;
+  }
+  .pic_liright strong::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+  }
+  .pic_liright a {
+    margin-top: 70px;
+    transition: var(--main-transition);
+    color: #303133;
+    border: 1px solid #ccc;
+    display: block;
+    padding: 8px 20px;
+  }
+  .pic_liright a:hover {
+    background-color: var(--main-color) !important;
+    color: var(--main-color-white) !important;
+    border: 1px solid var(--main-color);
+  }
+  .ml_piclsit3_li i:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid;
+    border-left: 5px solid;
+    border-color: var(--main-color);
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    transition: var(--main-transition);
+  }
+  .ml_piclsit3_li i:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 5px solid;
+    border-bottom: 5px solid;
+    border-color: var(--main-color);
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    transition: var(--main-transition);
+  }
+  .ml_piclsit3_li:hover {
+    box-shadow: 0 0 16px rgba(12, 3, 6, 0.3);
+  }
+  .ml_piclsit3_li:hover > i:before,
+  .ml_piclsit3_li:hover > i:after {
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .ml_piclsit3_li {
+    border: 5px solid #e8e8e8;
+    width: 100%;
+    position: relative;
+    transition: var(--main-transition);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+  .flex-rever {
+    flex-direction: row-reverse;
+  }
+  .pic_lileft {
+    width: 100%;
+    z-index: 9;
+  }
+  .pic_lileft img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  .pic_liright {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    z-index: 9;
+  }
+  .pic_liright strong {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-weight: normal;
+    font-size: 24px;
+  }
+  .pic_liright strong::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+  }
+  .pic_liright a {
+    margin-top: 70px;
+    transition: var(--main-transition);
+    color: #303133;
+    border: 1px solid #ccc;
+    display: block;
+    padding: 8px 20px;
+  }
+  .pic_liright a:hover {
+    background-color: var(--main-color) !important;
+    color: var(--main-color-white) !important;
+    border: 1px solid var(--main-color);
+  }
+  .ml_piclsit3_li i:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid;
+    border-left: 5px solid;
+    border-color: var(--main-color);
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    transition: var(--main-transition);
+  }
+  .ml_piclsit3_li i:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 5px solid;
+    border-bottom: 5px solid;
+    border-color: var(--main-color);
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    transition: var(--main-transition);
+  }
+  .ml_piclsit3_li:hover {
+    box-shadow: 0 0 16px rgba(12, 3, 6, 0.3);
+  }
+  .ml_piclsit3_li:hover > i:before,
+  .ml_piclsit3_li:hover > i:after {
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    visibility: visible;
+  }
+  .ml_piclist2_ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .ml_piclist2_ul li {
+    width: calc(100% / 1);
+    padding: 20px;
+  }
+  .ml_piclist2_ul li img {
+    width: 100%;
+    transition: var(--main-transition);
+  }
+  .ml_piclist2_ul li:hover img {
+    transform: scale(1.1);
+  }
+  .pos_div_pic_list {
+    position: relative;
+    overflow: hidden;
+  }
+  .piclist2pos {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .piclist2pos p {
+    color: var(--main-color-white);
+    text-align: center;
+    font-size: 24px;
+  }
+  .piclist2pos a {
+    display: block;
+    margin-top: 20px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: var(--main-color-white);
+    border: 1px solid var(--main-color-white);
+    transition: var(--main-transition);
+  }
+  .piclist2pos a:hover {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+  }
+  .ml_piclist {
+    width: 100%;
+  }
+  .ml_piclist1_ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ml_piclist1_ul li {
+    width: calc(100% / 1);
+    padding: 20px;
+  }
+  .ml_piclist1_ul li img {
+    width: 100%;
+  }
+  .ml_piclist1_ul li p {
+    transition: var(--main-transition);
+    text-align: center;
+    line-height: 55px;
+    background-color: var(--main-color);
+    color: var(--main-color-white);
+  }
+}
