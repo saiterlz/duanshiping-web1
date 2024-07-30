@@ -126,7 +126,7 @@ export default {
     const showBackToTop = ref(false);
     const handleScroll = () => {
       showBackToTop.value = window.pageYOffset > 1000;
-      console.log(showBackToTop.value);
+      // console.log(showBackToTop.value);
 
     };
 
