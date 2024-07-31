@@ -32,7 +32,7 @@
                   <i class="fa fa-envelope-o"></i>
                   <div>
                     <p>联系邮箱：</p>
-                    <span>888888@xx.com</span>
+                    <span>328763968@qq.com</span>
                   </div>
                 </li>
                 <li
@@ -43,13 +43,13 @@
                   <i class="fa fa-location-arrow"></i>
                   <div>
                     <p>联系地址：</p>
-                    <span>甘肃省兰州市七里河区兰州中心大夏</span>
+                    <span>甘肃省兰州市城关区南滨河东路5222号名城广场3号楼33层3309室</span>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="ml_contactcon_right ml_map">
-              <li style="height: 350px">
+              <li >
                 <div id="showMap"></div>
               </li>
             </div>
@@ -189,6 +189,6 @@ img {
   margin-top: 90px;
 }
 #showMap {
-  height: 350px;
+  height: 380px;
 }
 </style>
