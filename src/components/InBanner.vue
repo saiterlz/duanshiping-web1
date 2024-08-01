@@ -30,9 +30,9 @@
               <img src="@/assets/images/logo2.jpg" alt="通栏图片"
             /></a>
           </div>
-          <div class="swiper-button-prev" @click.stop="prevEl(item, index)" />
+          <div class="swiper-button-prev" />
           <!--左箭头。如果放置在swiper外面，需要自定义样式。-->
-          <div class="swiper-button-next" @click.stop="nextEl" />
+          <div class="swiper-button-next" />
           <!--右箭头。如果放置在swiper外面，需要自定义样式。-->
           <!-- 如果需要滚动条 -->
           <div class="swiper-scrollbar"></div>
@@ -43,6 +43,8 @@
 </template>
 
 <script>
+
+import "swiper/swiper-bundle.css";
 import AOS from "@/assets/js/aos.js";
 AOS.init();
 
@@ -58,7 +60,6 @@ import SwiperCore, {
 } from "swiper";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 // Import Swiper styles
-import "swiper/swiper-bundle.css";
 const modules = [Autoplay, Pagination, Navigation, A11y];
 
 export default {
@@ -77,10 +78,15 @@ export default {
       onSwiper,
       onSlideChange,
       pagination: {
+
         clickable: true,
         renderBullet: function (index, className) {
           return '<span class="' + className + '">' + (index + 1) + "</span>";
         },
+      },
+      navigation:{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
       modules: [Navigation, Pagination, Scrollbar, A11y],
     };

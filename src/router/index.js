@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Layout from "@/views/Layout.vue";
+import NProgress from 'nprogress'
 const Home=()=>import("@/views/Home/Home.vue")
 const About=()=>import("@/views/About/About.vue")
 const Login = () => import('@/views/Login.vue')
@@ -11,6 +12,7 @@ const Tradnews=()=>import('@/views/Tradnews/Tradnews.vue')
 const Content=()=>import('@/views/Content/Content.vue')
 const Message=()=>import('@/views/Message/Message.vue')
 const Download=()=>import('@/views/Download/Download.vue')
+const Info=()=>import('@/views/Info/Info.vue')
 
 
 const routes = [
@@ -49,8 +51,11 @@ const routes = [
       },{
         path:'/download',
         component:Download,
+      },{
+        path:'/info/:id',
+        name:'info',
+        component:Info,
       }
-      
     ]
   },
   {
@@ -63,6 +68,16 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes
+})
+
+//前置钩子
+router.beforeEach((to,from,next)=>{
+  NProgress.start()
+  next()
+})
+//后置钩子
+router.afterEach((to,from,next)=>{
+  NProgress.done()
 })
 
 export default router
