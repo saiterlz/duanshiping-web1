@@ -24,18 +24,23 @@ const routes = [
       {
         path: '/',
         component: Home,
+        hiddle: true
       },{
         path:'/about',
         component:About,
+        hiddle: true
       },{
         path:'/shotmovie',
         component:Shotmovie,
+        hiddle: true
       },{
         path:'/douyin',
         component:Douyin,
+        hiddle: true
       },{
         path:'/knowledge',
         component:Knowledge,
+        hiddle: true
       },{
         path:'/news',
         component:News,

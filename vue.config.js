@@ -1,3 +1,4 @@
+var webpack = require('webpack')
 const path = require('path')
 
 const { defineConfig } = require('@vue/cli-service')
@@ -8,8 +9,8 @@ module.exports = defineConfig({
     'style-resources-loader': {
       preProcessor: 'less',
       patterns: [
-        path.join(__dirname,'./src/assets/styles/variables.less'),
-        path.join(__dirname,'./src/assets/styles/mixins.less')
+        path.join(__dirname, './src/assets/styles/variables.less'),
+        path.join(__dirname, './src/assets/styles/mixins.less')
       ]
     }
   },
@@ -25,8 +26,15 @@ module.exports = defineConfig({
         changeOrigin: true   //用于控制请求头中的host值
       },
     }
+  },
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+      })
+    ]
   }
- 
 })
- 
- 
+
+

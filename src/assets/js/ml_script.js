@@ -22,12 +22,7 @@ $(".mb_item2_arrow").click(function (e) {
   $(".mb_item2_arrow").eq(num2).stop().toggleClass("ml_mb_arrowChange");
 });
 
-//   动画
-AOS.init({
-  duration: 1000,
-  disable: "mobile",
-  once: true,
-});
+
 
 // 电脑侧边栏效果
 $(document).ready(function () {
@@ -41,7 +36,7 @@ $(document).ready(function () {
   });
 });
 //   首页banner
-
+import Swiper  from "swiper"
 var mySwiper = new Swiper(".ml_banner", {
   autoplay: {
     delay: 3000,

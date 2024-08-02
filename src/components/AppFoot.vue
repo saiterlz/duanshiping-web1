@@ -62,14 +62,14 @@
         </a>
       </li>
       <li>
-        <a href="Message.aspx?ClassID=22" style="text-align: center">
-          <i class="fa fa-envelope-o"></i>
+        <a href="" style="text-align: center">
+          <i class="fa-solid fa-envelope"></i>
           <p>留言</p>
         </a>
       </li>
       <li>
-        <a href="#top" style="text-align: center">
-          <i class="fa fa-arrow-circle-o-up"></i>
+        <a  style="text-align: center"  @click="handleBackToTop">
+          <i class="fa-solid fa-arrow-up"></i>
           <p>回到顶部</p>
         </a>
       </li>
@@ -86,7 +86,7 @@
         </li>
 
         <li>
-          <i class="fa fa-qq"></i><span>QQ</span>
+          <i class="fa-brands fa-qq"></i><span>QQ</span>
           <div class="ml_sidebar_pos">3699999</div>
         </li>
 
@@ -104,11 +104,9 @@
         </li>
 
         <li class="backtotop ml_sidebar_show">
-          <a
-            href="#top"
-            style="color: #fff; display: flex; flex-direction: column"
-            ><i class="fa fa-angle-up"></i><span>返回顶部</span></a
-          >
+          <div style="color: #fff; display: flex; flex-direction: column;" @click="handleBackToTop">
+            <i class="fa fa-angle-up"></i><span>返回顶部</span>
+          </div>
         </li>
       </ul>
     </div>
@@ -119,9 +117,20 @@
 </template>
 
 <script>
+import "@/assets/js/bugFixed.js"
+import "@fortawesome/fontawesome-free/css/all.css";
+import AOS from "aos";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
 export default {
+    created() {
+    //生命周期函数（或者 mounted 函数）调用的方法才能运行
+    AOS.init({
+      duration: 1000,
+      disable: "mobile",
+      once: true,
+    });
+  },
   setup() {
     const showBackToTop = ref(false);
     const handleScroll = () => {
@@ -152,11 +161,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import url("../assets/styles/variables.less");
-@import url("../assets/styles/ml_index.css");
 // 网站通用侧边栏底部菜单
 @import url("../assets/styles/ML_contact_nav.css");
-// @import url("../assets/styles/font-awesome.min.css");
+@import url("../assets/styles/variables.less");
+@import url("../assets/styles/ml_index.css");
+@import url("../assets/styles/aos.css");
+@import url("../assets/styles/bugfixed.css");
 .foot {
   padding: 50px 0;
   background-color: #3b3b3b;
