@@ -69,13 +69,14 @@
   </div>
 </template>
   
-  <script>
+  <script setup>
 import InBanner from "@/components/InBanner.vue";
-export default {
-  components: {
-    InBanner,
-  },
-};
+defineOptions({
+  beforeRouteEnter(_to,_from,next){
+    window.scroll(0,0);
+    next();
+  }
+})
 </script>
   
   <style lang="less" scoped>

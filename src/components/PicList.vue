@@ -10,7 +10,7 @@
                 <img src="../assets/images/jieguo_1.png" alt="优秀案例" />
                 <div class="piclist2pos">
                   <p>优秀案例</p>
-                  <a href="PicDetail.aspx?ID=167">查看详情</a>
+                  <a href="">查看详情</a>
                 </div>
               </div>
             </li>
@@ -19,7 +19,7 @@
                 <img src="../assets/images/jieguo_2.png" alt="优秀案例1" />
                 <div class="piclist2pos">
                   <p>优秀案例1</p>
-                  <a href="PicDetail.aspx?ID=168">查看详情</a>
+                  <a href="">查看详情</a>
                 </div>
               </div>
             </li>
@@ -28,7 +28,7 @@
                 <img src="../assets/images/phone_img3.jpg" alt="优秀案例2" />
                 <div class="piclist2pos">
                   <p>优秀案例2</p>
-                  <a href="PicDetail.aspx?ID=169">查看详情</a>
+                  <a href="">查看详情</a>
                 </div>
               </div>
             </li>
@@ -37,7 +37,7 @@
                 <img src="../assets/images/phone_img4.jpg" alt="优秀案例3" />
                 <div class="piclist2pos">
                   <p>优秀案例3</p>
-                  <a href="PicDetail.aspx?ID=170">查看详情</a>
+                  <a href="">查看详情</a>
                 </div>
               </div>
             </li>

@@ -3,6 +3,6 @@
   <router-view />
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 @import url("./assets/styles/mixins.less");
 </style>

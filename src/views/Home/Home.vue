@@ -5,18 +5,17 @@
     <div class="con1">
       <div class="con1con">
         <div class="contitle" data-aos="zoom-in">
-          <strong>抖音代运营服务</strong>
+          <strong>短视频运营服务</strong>
           <img src="../../assets/images/line.png" alt="" />
-          <p>壹家视频，提供一切以客户为中心的短视频代运营服务</p>
+          <p>焕雅传媒，提供一切以客户为中心的短视频代运营服务</p>
         </div>
         <ul>
           <li data-aos="zoom-in" data-aos-delay="100" @click="toInfo">
             <div class="con1imgbox">
               <img src="../../assets/images/text.png" alt="text.png" />
             </div>
-            <p>短视频代运营个性化定制</p>
-            <span
-              >壹家视频，通过短视频代运营，用***前沿的技术，全新的互联网思维，为您是企业打造高端的品牌</span
+            <p>短视频账号托管服务</p>
+            <span>账号全托管服务，包含文案编写、视频拍摄、视频剪辑、视频发布为一体的服务。账号装修、定位、标签打造。短视频日更。短视频数据反馈，调整。</span
             >
           </li>
 
@@ -24,33 +23,49 @@
             <div class="con1imgbox">
               <img src="../../assets/images/pen.png" />
             </div>
-            <p>短视频专业化拍摄</p>
-            <span>壹家视频，研究视频流量的专业代运营</span>
+            <p>公司矩阵账号托管服务</p>
+            <span>矩阵账号文案编写、视频拍摄、视频剪辑、视频发布，混剪托管。矩阵视频日更。短视频数据反馈，调整。</span>
           </li>
 
           <li data-aos="zoom-in" data-aos-delay="300" @click="toInfo">
             <div class="con1imgbox">
               <img src="../../assets/images/chat.png" />
             </div>
-            <p>爆款视频定制推广</p>
-            <span>壹家视频，研究视频流量的专业代运营</span>
+            <p>矩阵软件服务</p>
+            <span>件教学包会。技术服务支持。系统更新维护。适用于员工账号多，需要网络宣传获客的企业。</span>
           </li>
 
           <li data-aos="zoom-in" data-aos-delay="400" @click="toInfo">
             <div class="con1imgbox">
               <img src="../../assets/images/shop.png" />
             </div>
-            <p>短视频矩阵推广</p>
-            <span>壹家视频，研究视频流量的专业代运营</span>
+            <p>企业直播间搭建服务</p>
+            <span>直播间搭建。直播人员、运营人员孵化。（主播话术精进、直播间实操、软件设备使用）。直播带播业务。</span>
           </li>
 
-          <li data-aos="zoom-in" data-aos-delay="500" @click="toInfo">
+          <li data-aos="zoom-in" data-aos-delay="400" @click="toInfo">
             <div class="con1imgbox">
-              <img src="../../assets/images/vi.png" />
+              <img src="../../assets/images/shop.png" />
             </div>
-            <p>短视频达人探店扶持</p>
-            <span>壹家视频，研究视频流量的专业代运营</span>
+            <p>个人ip打造</p>
+            <span>1、1v1个人IP定位（用户画像分析）。2、 形象包装（人设）。3、 短视频、直播能力培养。4、短视频内容打造。5、变现逻辑指导。6、运营陪跑。7、定期实地指导。8、线上线下定期培训。</span>
           </li>
+          <li data-aos="zoom-in" data-aos-delay="400" @click="toInfo">
+            <div class="con1imgbox">
+              <img src="../../assets/images/shop.png" />
+            </div>
+            <p>商业IP打造</p>
+            <span>1、线上商业模式。2、线上线下商业布局。3、传播形式拓展。4、线上线下渠道通路。5、私域转化。6、视频/直播内容。7、运营陪跑。8、定期实地指导。9、线上线下定期培训</span>
+          </li>
+          <li data-aos="zoom-in" data-aos-delay="400" @click="toInfo">
+            <div class="con1imgbox">
+              <img src="../../assets/images/shop.png" />
+            </div>
+            <p>企业IP打造（营销蓝V）</p>
+            <span>1、企业在新媒体行业数据分析，商业定位。2、企业账号IP定位。3、企业账号运营方案。4、文案脚本策划、短视频拍摄剪辑。5、企业号代运营服务（作品发布、付费流投放规划、后台数据分析、数据建模）
+</span>
+          </li>
+
         </ul>
       </div>
     </div>
@@ -60,7 +75,7 @@
         <div class="contitle" data-aos="zoom-in">
           <strong>抖音代运营案例</strong>
           <img src="../../assets/images/line.png" alt="" />
-          <p>壹家视频，为您提供精准的流量池服务</p>
+          <p>焕雅传媒，为您提供精准的流量池服务</p>
         </div>
 
         <ul>
@@ -74,7 +89,7 @@
             <div class="con2_topbox">
               <div class="con2_imgbox">
                 <img
-                  :src="getImageUrl(item.picname)"
+                  :src="item.picname"
                   :alt="item.picname"
                 />
               </div>
@@ -91,100 +106,13 @@
       </div>
     </div>
     <!-- con2 -->
-    <!-- <div class="con2">
-      <div class="con2con">
-        <div class="contitle" data-aos="zoom-in">
-          <strong>抖音代运营案例</strong>
-          <img src="../../assets/images/line.png" alt="" />
-          <p>壹家视频，为您提供精准的流量池服务</p>
-        </div>
-        <ul>
-          <li
-            data-aos="zoom-in"
-            data-aos-delay="100"
-            @click="handleChangepage(data._id)"
-          >
-            <div class="con2_topbox">
-              <div class="con2_imgbox">
-                <img
-                  src="../../assets/images/douyinyunyin.jpg"
-                  alt="phone_img1.jpg"
-                />
-              </div>
-              <div class="con2pos">
-                <strong>查看案例</strong>
-              </div>
-            </div>
-            <div class="con2_botbox">
-              <p>优秀案例</p>
-              <i class="fa fa-eye"></i>
-            </div>
-          </li>
-
-          <li data-aos="zoom-in" data-aos-delay="200" @click="toInfo">
-            <div class="con2_topbox">
-              <div class="con2_imgbox">
-                <img
-                  src="../../assets/images/relaiship.jpg"
-                  alt="phone_img2.jpg"
-                />
-              </div>
-              <div class="con2pos">
-                <strong>查看案例</strong>
-              </div>
-            </div>
-            <div class="con2_botbox">
-              <p @click="toInfo">优秀案例1</p>
-              <i class="fa fa-eye"></i>
-            </div>
-          </li>
-
-          <li data-aos="zoom-in" data-aos-delay="300" @click="toInfo">
-            <div class="con2_topbox">
-              <div class="con2_imgbox">
-                <img
-                  src="../../assets/images/phone_img3.jpg"
-                  alt="phone_img3.jpg"
-                />
-              </div>
-              <div class="con2pos">
-                <strong>查看案例</strong>
-              </div>
-            </div>
-            <div class="con2_botbox">
-              <p>优秀案例2</p>
-              <i class="fa fa-eye"></i>
-            </div>
-          </li>
-
-          <li data-aos="zoom-in" data-aos-delay="400" @click="toInfo">
-            <div class="con2_topbox">
-              <div class="con2_imgbox">
-                <img
-                  src="../../assets/images/phone_img4.jpg"
-                  alt="phone_img4.jpg"
-                />
-              </div>
-              <div class="con2pos">
-                <strong>查看案例</strong>
-              </div>
-            </div>
-            <div class="con2_botbox">
-              <p>优秀案例3</p>
-              <i class="fa fa-eye"></i>
-            </div>
-          </li>
-        </ul>
-        <a href="" class="more"> 更多+ </a>
-      </div>
-    </div> -->
     <!-- con3 -->
     <div class="con3">
       <div class="con3con">
         <div class="contitle" data-aos="zoom-in">
           <strong>短视频代运营方案</strong>
           <img src="../../assets/images/line.png" alt="" />
-          <p>壹家视频，为您提供精准的流量池服务</p>
+          <p>焕雅传媒，为您提供精准的流量池服务</p>
         </div>
         <ul>
           <li data-aos="zoom-in" data-aos-delay="100" @click="toInfo">
@@ -248,7 +176,7 @@
             </div>
           </li>
         </ul>
-        <a href="Photo.aspx?ClassID=19" class="more">更多+</a>
+        <a href="" class="more">更多+</a>
       </div>
     </div>
     <!-- con4 -->
@@ -432,12 +360,22 @@ import AOS from "aos";
 import { ref, reactive, onMounted, computed } from "vue";
 import axios from "axios";
 import { useRouter } from "vue-router";
+import { useStore } from "vuex";
 
+const isCollapse = computed(()=>store.state.menu.isCollapse)
+console.log("isCollapse",isCollapse);
+console.log("isCollapse",!isCollapse);
+console.log('父组件created')
+
+defineOptions({
+  beforeRouteEnter(_to,_from,next){
+    window.scroll(0,0);
+    next();
+  }
+})
 
 const router = useRouter();
-const getImageUrl = (name) => {
-  return new URL(`../assets/images/${name}`, import.meta.url).href
-}
+
 const handleChangepage = (id) => {
   console.log(id);
   router.push(`/info/${id}`);
@@ -450,11 +388,15 @@ const data=reactive({
 const getArticles = () => {
   const vm = this;
   axios.get("/api/admin/articles").then(response=>{
-      console.log('response',response);
+      // console.log('response',response);
       if (response.data.status == true) {
         console.log('for');
         for (let i = 0; i < 4; i++) {
-          console.log(response.data.data.articles[i]);
+          // console.log(response.data.data.articles[i]);
+          let temp = response.data.data.articles[i];
+          // 重新定义picname的值，添加url路径。这样可以正常显示
+          temp.picname = require('@/assets/images/'+temp.picname);
+          // console.log(temp.picname);
           data.articles.push(response.data.data.articles[i])        
         }
 
@@ -470,9 +412,11 @@ AOS.init({
   disable: "mobile",
   once: true,
 });
+
 onMounted (() => {
   //生命周期函数（或者 mounted 函数）调用的方法才能运行
   getArticles();
+  console.log('父组件Mounted')
 });
 </script>
 

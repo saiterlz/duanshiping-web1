@@ -15,15 +15,10 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import AppTopNav  from "@/components/AppTopNav.vue";
 import AppFoot from "@/components/AppFoot.vue"
-export default {
-    components:{
-        AppTopNav,
-        AppFoot
-    }
-};
+
 </script>
 
 <style lang="less" scoped>

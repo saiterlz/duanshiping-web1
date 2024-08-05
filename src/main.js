@@ -6,11 +6,11 @@ import axios from 'axios'
 import $ from 'jquery'
 import AOS from 'aos';
 
-
 // 引入初始化样式
 import '@/assets/styles/base.css'
 
 const app = createApp(App)
+//store 挂载
 app.use(store)
 app.use(router)
 app.use($)

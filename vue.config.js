@@ -1,3 +1,7 @@
+const AutoImport = require('unplugin-auto-import/webpack')
+const Components = require('unplugin-vue-components/webpack')
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
+
 var webpack = require('webpack')
 const path = require('path')
 
@@ -29,6 +33,12 @@ module.exports = defineConfig({
   },
   configureWebpack: {
     plugins: [
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+      }),
+      Components({
+        resolvers: [ElementPlusResolver()],
+      }),
       new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery",

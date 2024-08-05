@@ -115,10 +115,15 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import AOS from "@/assets/js/aos.js";
 AOS.init();
-export default {};
+defineOptions({
+  beforeRouteEnter(_to,_from,next){
+    window.scroll(0,0);
+    next();
+  }
+})
 </script>
 
 <style lang="less" scoped>

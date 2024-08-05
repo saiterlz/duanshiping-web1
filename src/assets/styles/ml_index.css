@@ -262,7 +262,7 @@ img {
     flex-wrap: wrap;
   }
   .con1con ul li {
-    width: calc(100% / 5);
+    width: calc(100% / 4);
     cursor: pointer;
     border-top: 1px solid #e3e3e3;
     border-bottom: 1px solid #e3e3e3;

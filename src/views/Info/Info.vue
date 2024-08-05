@@ -13,16 +13,23 @@
         <div class="update_detail">
           <div class="update_detail_top">
             <h1>
-              <span>{{ article.title }}</span>
+              <span>{{data.article.title}}</span>
             </h1>
             <h2>
-              <span>{{ article.content }}</span>
+              <span>3214</span>
+              <font class="eye"></font>
+              <time >{{whichTime(data.article.createdAt) }}</time>
               <font class="eye"></font>
             </h2>
           </div>
+
           <div class="update_detail_con">
-            <span>{{ article.createdAt }}</span>
+            <span>{{data.article.content}}</span>
+            <div class="">
+            <span><img :src="data.article.picname" alt=""></span>
           </div>
+          </div>
+
           <div class="update_detail_bot">
             <a class="prev" href="PicDetail.aspx?ID=151">上一篇：没有了</a
             ><a class="next" href="PicDetail.aspx?ID=150"
@@ -36,46 +43,47 @@
   </div>
 </template>
   
-  <script>
+<script setup>
 import InBanner from "@/components/InBanner.vue";
-import { onMounted, ref,re, watchEffect, onBeforeUnmount } from "vue";
+import { onMounted, ref, reactive, watchEffect, onBeforeUnmount ,toRaw ,} from "vue";
 import axios from "axios";
 import { useRoute, useRouter } from "vue-router";
+import moment from 'moment'
 
-export default {
-  name: "Info",
-  data() {
-    return {
-      article:[]
-    };
-  },
-  onMounted(){
-   this.getArticle();
-  },
-  methods:{
-    async getArticle(){
-      try{
-        const response = await axios.get("/api/admin/articles/" + route.params.id);
-        const{data}=response.data.data;
-        this.article=data;
-        console.log(this.article)
-      } catch(error){
-        console.error(error);
-      }
-    }
-  },
-  setup() {
+moment.locale("zh-cn")
 
-    
-    return{
-      
-    }
-  },
 
-  components: {
-    InBanner,
+const whichTime = time =>{
+    return moment(time).format("lll")
+}
+
+console.log("子组件created");
+const route = useRoute();
+defineOptions({
+  beforeRouteEnter(_to,_from,next){
+    window.scroll(0,0);
+    next();
   }
-};
+})
+const data = reactive({
+  article:{}
+})
+
+
+const getArticle = watchEffect(async () => {
+  if (!route.params.id) return;
+  let res1 = await axios.get(`/api/articles/${route.params.id}`);
+  data.article =  res1.data.data.article
+  data.article.picname = require('@/assets/images/'+res1.data.data.article.picname);
+
+
+  console.log(data);
+});
+
+onMounted(() => {
+  getArticle();
+  console.log(`子组件Mounted`);
+});
 </script>
   
   <style lang="less" scoped>
