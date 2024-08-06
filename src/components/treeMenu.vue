@@ -1,5 +1,5 @@
 <template>
-    <template v-for="(item, index) in props.menuData" :key="index">
+    <template v-for="(item, index) in props.menuData.slice(0,8)" >
         <!-- 无子菜单 --> 
 
         <el-menu-item 
@@ -35,12 +35,13 @@ AOS.init({
 });
 
 const props = defineProps(['menuData', 'index'])
-console.log(props);
+//console.log(props);
 
 //创建router实例
 const router= useRouter()
 //点击菜单 
 const handleClick = (item,active)=>{
+    //console.log(item,item);
     router.push(item.meta.path)
 }
 </script>

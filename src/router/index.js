@@ -6,8 +6,8 @@ const About = () => import("@/views/About/About.vue")
 const Login = () => import('@/views/Login.vue')
 const Shotmovie = () => import('@/views/Shotmovie/Shotmovie.vue')
 const Douyin = () => import('@/views/Douyin/Douyin.vue')
-const Knowledge = () => import('@/views/Knowledge/Knowledge.vue')
 const News = () => import('@/views/News/News.vue')
+const Knowledge = () => import('@/views/Knowledge/Knowledge.vue')
 const Tradnews = () => import('@/views/Tradnews/Tradnews.vue')
 const Content = () => import('@/views/Content/Content.vue')
 const Message = () => import('@/views/Message/Message.vue')
@@ -41,8 +41,9 @@ const routes = [
         component: Douyin,
         // hiddle: true
       }, {
+        // 删除news 前面的斜杠后，可以正常访问二级目录
         path: '/news',
-        meta: { id: '5', name: '新闻资讯', icon: '', path: '/news', describe: '用于展示网站首页信息' },
+        meta: { id: '5', name: '新闻资讯', icon: '', path: '/news', describe: '用于展示网站首页信息'},
         component: News,
         children: [{
           path: '/tradnews',
@@ -68,10 +69,10 @@ const routes = [
         component: Content,
       }, {
         path: '/info/:id',
-        meta: { id: '9', name: '文章详情', icon: '', path: '/info', describe: '用于展示网站首页信息' },
+        // meta: { id: '9', name: '文章详情', icon: '', path: '/info', describe: '用于展示网站首页信息' },
         name: 'info',
         component: Info,
-        hiddle: true
+        // hiddle: true
 
       }
     ]

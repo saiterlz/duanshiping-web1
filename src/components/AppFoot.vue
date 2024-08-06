@@ -5,9 +5,8 @@
     <div class="foot">
       <div class="footer">
         <!-- 回到顶部 -->
-        <a @click="handleBackToTop" v-show="showBackToTop" class="f_top"
-          ><img src="../assets/images/top.png" alt=""
-        /></a>
+        <a @click="handleBackToTop" v-show="showBackToTop" class="f_top"><img src="../assets/images/top.png"
+            alt="" /></a>
         <strong>友情链接</strong>
         <div class="a_link">
           <a href="http://www.baidu.com">腾讯</a>
@@ -15,7 +14,7 @@
           <span>|</span>
 
           <a href="http://www.baidu.com">百度</a>
-          
+
           <span>|</span>
 
           <a href="http://www.douyin.com">抖音</a>
@@ -25,25 +24,18 @@
     <!-- copy -->
     <div class="copy">
       <div class="copycon">
-        © 2024 兰州焕雅文化传媒有限公司&nbsp;&nbsp;All Rights Reserved.
-        &nbsp;&nbsp;备案号：<a href="http://beian.miit.gov.cn/" target="_blank"
-          >甘ICP备202388888888号</a
-        >
+        <span>© 2024 兰州焕雅文化传媒有限公司&nbsp;&nbsp;All Rights Reserved.</span>
+       <br>
+       备案号：<a href="http://beian.miit.gov.cn/" target="_blank">甘ICP备202388888888号</a>
+       <br>
 
-        <a
-          href="https://www.aliyun.com/"
-          title="阿里云提供技术服务"
-          target="_blank"
-        >
+        <a href="https://www.aliyun.com/" title="阿里云提供技术服务" target="_blank">
           阿里云提供技术服务
         </a>
       </div>
     </div>
     <!-- footer -->
-
     <!-- 购物车 -->
-
-
     <!-- 手机端底部菜单 -->
     <ul class="ml_mbbot">
       <li>
@@ -53,10 +45,7 @@
         </a>
       </li>
       <li>
-        <a
-          href="Tel:联系电话：0513-88888888&nbsp;&nbsp;"
-          style="text-align: center"
-        >
+        <a href="Tel:联系电话：0513-88888888&nbsp;&nbsp;" style="text-align: center">
           <i class="fa fa-phone"></i>
           <p>电话</p>
         </a>
@@ -68,16 +57,14 @@
         </a>
       </li>
       <li>
-        <a  style="text-align: center"  @click="handleBackToTop">
+        <a style="text-align: center" @click="handleBackToTop">
           <i class="fa-solid fa-arrow-up"></i>
           <p>回到顶部</p>
         </a>
       </li>
     </ul>
     <!-- 手机端底部菜单 -->
-
     <!-- 电脑侧边栏 -->
-
     <div class="ml_sidebar">
       <ul>
         <li>
@@ -97,9 +84,7 @@
           </div>
         </li>
 
-        <li
-          onclick="window.open('tencent://message/?uin=1234567&Site=Sambow&Menu=yes')"
-        >
+        <li onclick="window.open('tencent://message/?uin=1234567&Site=Sambow&Menu=yes')">
           <i class="fa fa-user"></i><span>客服</span>
         </li>
 
@@ -110,7 +95,6 @@
         </li>
       </ul>
     </div>
-
     <!-- 电脑侧边栏 -->
     <!-- 网站通用侧边栏底部菜单 -->
   </div>
@@ -123,7 +107,7 @@ import AOS from "aos";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
 export default {
-    created() {
+  created() {
     //生命周期函数（或者 mounted 函数）调用的方法才能运行
     AOS.init({
       duration: 1000,
@@ -167,16 +151,19 @@ export default {
 @import url("../assets/styles/ml_index.css");
 @import url("../assets/styles/aos.css");
 @import url("../assets/styles/bugfixed.css");
+
 .foot {
   padding: 50px 0;
   background-color: #3b3b3b;
   margin-top: 50px;
 }
+
 .footer {
   max-width: 1300px;
   margin: 0 auto;
   position: relative;
 }
+
 .f_top {
   width: 56px;
   height: 64px;

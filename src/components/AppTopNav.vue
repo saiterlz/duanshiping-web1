@@ -118,6 +118,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import AOS from "aos";
 
 const router = useRouter();
+//console.log('router',router.options.routes[0].children.length);
 const menuData = reactive(router.options.routes[0].children);
 // const props = defineProps(['menuData']);
 // console.log(props);
@@ -125,7 +126,7 @@ const activeIndex = ref("1");
 const activeIndex2 = ref("1");
 
 const handleSelect = (key, keyPath) => {
-  console.log(key, keyPath);
+  //console.log(key, keyPath);
 };
 
 //生命周期函数（或者 mounted 函数）调用的方法才能运行
